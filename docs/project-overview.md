@@ -1,15 +1,18 @@
-Below is a **production-grade blueprint** (plus runnable code skeleton) for a *goal-driven* LangGraph crew that:
+# LinkedIn Content Automation Agent
 
-1. Takes a **topic** as input
-2. Finds *fresh, high-engagement* content on the open web, YouTube and X/Twitter (via **Apify** + **Firecrawl**)
-3. Writes a long-form blog post and generates a hero image
-4. Auto-posts it to LinkedIn
+A production-grade LangGraph system that automates LinkedIn content creation and publishing.
 
-Everything is typed with **Pydantic** models so each node knows exactly what data it receives and returns.
+## Tech Stack
 
----
+- **Core Framework**: LangGraph for orchestration
+- **Data Validation**: Pydantic v2 for type-safe state management
+- **AI Integration**: OpenAI GPT-4 for content generation
+- **Data Collection**: 
+  - Apify for YouTube scraping
+  - Firecrawl for Twitter/X scraping
+  - Custom web scraping
 
-## 1 Agent-team architecture
+## Architecture
 
 ```
 ┌──────────┐      ┌─────────────┐
@@ -44,14 +47,39 @@ Everything is typed with **Pydantic** models so each node knows exactly what dat
                          └─────────────────┘
 ```
 
-*Planner* keeps the **goal** (“publish a LinkedIn post on *X*”) in global state, delegates subtasks, and decides when to finish.
+## State Management
+
+The system uses Pydantic models for type-safe state management:
+
+- `ContentItem`: Individual content pieces from any source
+- `ScrapedContent`: Collection of content from all sources
+- `BlogPost`: Final blog post structure
+- `AgentState`: Global state for the LangGraph system
 
 ## Project Structure
 
 ```
-src/config
-src/graph
-src/models
-src/services
-src/utils
+src/
+├── config/         # Configuration management
+├── graph/          # LangGraph workflow definitions
+├── models/         # Pydantic models
+├── services/       # External service integrations
+└── utils/          # Utility functions
 ```
+
+## Key Features
+
+1. **Type-Safe State Management**
+   - Pydantic models for all data structures
+   - Runtime validation of all data
+   - Clear separation of concerns
+
+2. **Modular Architecture**
+   - Each node is independently testable
+   - Clear data flow between components
+   - Easy to extend and modify
+
+3. **Production-Ready**
+   - Comprehensive logging
+   - Environment-based configuration
+   - Error handling and recovery
