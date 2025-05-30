@@ -44,11 +44,11 @@ src/
 ```
 
 ## Phase 1: Core Infrastructure ✅
-- [x] Set up Pydantic models for state management
-- [x] Implement basic LangGraph structure
-- [x] Create configuration management
-- [x] Set up environment variable handling
-- [x] Implement basic logging
+- [ ] Set up Pydantic models for state management
+- [ ] Implement basic LangGraph structure
+- [ ] Create configuration management
+- [ ] Set up environment variable handling
+- [ ] Implement basic logging
 
 ## Phase 2: Agent Development (In Progress)
 - [ ] Set up PydanticAI Base Agent
