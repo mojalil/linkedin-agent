@@ -68,23 +68,6 @@ LINKEDIN_MEMBER_ID=
 OPENAI_API_KEY=
 ```
 
-## Project Structure
-```
-linkedin-agent/
-├── docs/
-│   ├── project-overview.md
-│   └── project-planning.md
-├── src/
-│   ├── __init__.py
-│   ├── state.py
-│   ├── tools.py
-│   ├── graph.py
-│   └── config.py
-├── tests/
-│   └── __init__.py
-├── pyproject.toml
-└── README.md
-```
 
 ## Next Steps
 1. Initialize the Poetry project

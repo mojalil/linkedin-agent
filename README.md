@@ -31,24 +31,6 @@ An AI-powered agent that automatically creates and publishes LinkedIn content us
    OPENAI_API_KEY=your_openai_api_key
    ```
 
-## Project Structure
-
-```
-linkedin-agent/
-├── docs/
-│   ├── project-overview.md
-│   └── project-planning.md
-├── src/
-│   ├── __init__.py
-│   ├── state.py
-│   ├── tools.py
-│   ├── graph.py
-│   └── config.py
-├── tests/
-│   └── __init__.py
-├── pyproject.toml
-└── README.md
-```
 
 ## Development
 
